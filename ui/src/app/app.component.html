@@ -1,0 +1,19 @@
+<div class="c-strlength">
+  <form>
+    <div class="form-group">
+      <label for="strLength">Enter a String</label>
+      <input id="strLength" name="strLength" class="form-control"
+             [(ngModel)]="inputString" (keyup.enter)="getStringLength(inputString)"/>
+    </div>
+  </form>
+
+  <div *ngIf="stringLength">
+    Length of String
+    <div>
+      {{stringLength}}
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
